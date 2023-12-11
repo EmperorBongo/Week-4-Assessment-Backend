@@ -52,6 +52,8 @@ const forgotPassword = () => {
         })   
 }
 
+    const userDelete = 'User id' = ()
+
 const complimentBtn = document.getElementById("complimentButton")
 complimentBtn.addEventListener('click', getCompliment)
 
