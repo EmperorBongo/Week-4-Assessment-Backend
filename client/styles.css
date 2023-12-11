@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: dimgray;
+  }
+  
+  h2 {
+    font-size: 2;
+    margin-bottom: 15px;
+    color: black;
+  }
+  
+  button,
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    color: red;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width:100%;
+    border: 1px solid lightgray;
+  }
+  
+  input[type="password"] {
+    margin-bottom: 20px;
+  }

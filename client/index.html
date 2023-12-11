@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Back End Assessment</title>
-  </head>
-  <body class="container">
-    <button id="complimentButton">Get a compliment</button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Back End Assessment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container">
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="main.js"></script>
+  <Header> 
+    <h1 id="site-title">CLICKY click click</>
+  </Header>
     
-  </body>
+  <button id="complimentButton">Get a compliment</button>
+  <button id="fortuneButton"> Whats your fortune?</button>
+
+  <H2>Who are you?</H2>
+  <form id="userDetials">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName">
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+
+    <button id="submitUserDetials">Submit</button>
+
+    <button id="forgotPassword">Forgot Password:</button>
+
+
+
+  </form>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+  
+</body>
 </html>
