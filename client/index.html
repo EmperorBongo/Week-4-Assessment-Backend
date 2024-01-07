@@ -3,42 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Back End Assessment</title>
+  <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="styles.css">
+  <title>Back End Assessment</title>
 </head>
 <body class="container">
 
   <Header> 
-    <h1 id="site-title">CLICKY click click</>
+    <h1 id="site-title">Get a Virtual Dog</>
   </Header>
+   
+      <button id="complimentButton">Get a compliment</button>
+      <button id="fortuneButton"> Whats your fortune?</button>
     
-  <button id="complimentButton">Get a compliment</button>
-  <button id="fortuneButton"> Whats your fortune?</button>
+  <h2>What is your dogs name?</h2>
 
-  <H2>Who are you?</H2>
-  <form id="userDetials">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
+  <form id="dogDetails">
+    <input id="nameInput" type="text" placeholder="Dog Name">
+    <input id ="age" type="age" placeholder="Dog Age" maxLength="2">
     
-    <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName">
-
-    <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName">
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
-
-
-    <button id="submitUserDetials">Submit</button>
-
-    <button id="forgotPassword">Forgot Password:</button>
-
-
-
+    <button id="submitDog">Submit</button>
   </form>
 
-  <button id="deleteUserDetails">Delete User</button>
+<div id="name-container"></div>
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="main.js"></script>

@@ -1,3 +1,11 @@
+const fortuneBtn = document.getElementById("fortuneButton")
+const complimentBtn = document.getElementById("complimentButton")
+const form = document.querySelector('#dogDetails')
+const Input = document.querySelector('#nameInput')
+
+
+
+
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment")
         .then(res => {
@@ -19,15 +27,8 @@ const getFortune = () => {
         })
 }
 
-const submitUserDetails = () => {
-    const username = document.getElementById('username').value
-    const firstName = document.getElementById('firstName').value
-    const lastName = document.getElementById('lastName').value
-    const password = document.getElementById('password').value
-
-    console.log('User Details:', { username, firstName, lastName })
-
-    axios.post('http://localhost:4000/api/userdetails', { username, firstName, lastName, password })
+const createDog = () => {
+    axios.post('http://localhost:4000/api/userdetails', { dogName })
         .then(res => {
             const data = res.data
             alert(data)
@@ -38,30 +39,7 @@ const submitUserDetails = () => {
         })
 }
 
-const forgotPassword = () => {
-    const newPassword = prompt('Please reset the password:')
-
-    axios.post('http://localhost:4000/api/forgotpassword', {newPassword})
-        .then(response => {
-            console.log('Server response:', response.data)
-            alert('Please Reset your password')
-        })
-        .catch(error => {
-            console.error('Error:', error)
-            alert('Failed to initiate password reset. Please try again.')
-        })   
-}
-
-    const userDelete = 'User id' = ()
-
-const complimentBtn = document.getElementById("complimentButton")
 complimentBtn.addEventListener('click', getCompliment)
-
-const fortuneBtn = document.getElementById("fortuneButton")
 fortuneBtn.addEventListener('click', getFortune)
-
-const submitButton = document.getElementById('submitUserDetials')
 submitButton.addEventListener('click', submitUserDetails)
 
-const forgotPasswordButton = document.getElementById('forgotPassword')
-forgotPasswordButton.addEventListener('click', forgotPassword)

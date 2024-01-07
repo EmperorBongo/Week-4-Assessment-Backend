@@ -1,9 +1,10 @@
-let userDetails = []
+let dogNames = []
+let globalID = 1
 
 module.exports = {
     
     getCompliment: (req, res) => {
-        const compliments = ["Gee, you're a smart cookie!", "Cool shirt!", "Your Javascript skills are stellar."];
+        const compliments = ["RUFF RUFF!", "Youre a coooool cat!", "Nice paws"];
         
      
         let randomIndex = Math.floor(Math.random() * compliments.length)
@@ -13,7 +14,7 @@ module.exports = {
     },
     
     getFortune: (req, res) => {
-        const fortune = ["Today You will become rich!", "You are only as strong as your head!", "Your going to find peace today.", "Youre going to die.", "You will become batman."];
+        const fortune = ["Today you will go on a walk!", "You are only as strong as your head!", "Your going to find peace today.", "Youre going to die.", "You will become batman."];
 
         let randomIndex1 = Math.floor(Math.random() * fortune.length)
         let randomFortune = fortune[randomIndex1]
@@ -21,22 +22,11 @@ module.exports = {
         res.status(200).send(randomFortune)
     },
 
-    postUserDetails: (req, res) => {
-        const { username, firstName, lastName, password } = req.body
-
-       
-        console.log('Received User Details:', { username, firstName, lastName, password })
-
-        res.status(200).send('User details received successfully!')
+    createDog: (req, res) => {
+        req.body.id = globalID
+        dogDetails.push(req.body)
+        globalID++
+        res.status(200).send('Dog name received successfully!')
     },
-
-    putForgotPassword: (req, res) => {
-        const { newPassword } = req.body;
-
-    
-        console.log('Reset Password:', { newPassword });
-
-        res.status(200).send('Password reset successfully!');
-    }
 
 }

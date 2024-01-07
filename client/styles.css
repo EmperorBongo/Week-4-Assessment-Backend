@@ -37,10 +37,6 @@ body {
     cursor: pointer;
   }
   
-  label {
-    margin-bottom: 5px;
-    color: red;
-  }
   
   input[type="text"],
   input[type="password"] {
