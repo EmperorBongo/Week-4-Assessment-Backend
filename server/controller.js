@@ -1,4 +1,4 @@
-let dogNames = []
+let dogs = []
 let globalID = 1
 
 module.exports = {
@@ -24,9 +24,28 @@ module.exports = {
 
     createDog: (req, res) => {
         req.body.id = globalID
-        dogDetails.push(req.body)
+        dogs.push(req.body)
         globalID++
-        res.status(200).send('Dog name received successfully!')
+        res.status(200).send(dogs)
     },
+
+    deleteDog: (req, res) => {
+        const newArr = dogs.filter((dog) => dog.id !== +req.params.id)
+        dogs = newArr
+        res.status(200).send(dogs)
+    },
+
+    getDogs: (req, res) => {
+        res.status(200).send(dogs)
+    },
+
+
+    updateDogName: (req, res) => {
+    const {id} = req.params;
+    const {name} = req.body;
+    const foundDog = dogs.find((dog) => dog.id === +id);
+    foundDog.name = name;
+    res.status(200).send(foundDog);
+  }
 
 }
